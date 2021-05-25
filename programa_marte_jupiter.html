@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Tu peso fuera de la tierra </title>
+  </head>
+  <body>
+    <h1> Tu peso en otros planetas </h1>
+    <p> En la Tierra pesas distinto que en Marte o Jupiter </p>
+    <script>
+      var usuario = prompt("Cual es tu peso?")
+      var planeta = prompt("Elige tu planeta. \n 1 es Marte, 2 es Jupiter");
+      //prompt = obtener datos del ursuario. usuario es una cadena de texto
+      var peso = parseFloat(usuario);   //ahora peso es el # de usuario
+      var g_tierra = 9.8;
+      var g_marte = 3.7;
+      var g_jupiter = 24.8;
+      var peso_final;
+      var nombre;
+      if (planeta == 1) {               //los bloques de codigo van entre {}
+          peso_final = peso * g_marte / g_tierra;
+          nombre = "Marte";
+      }
+      else if (planeta == 2) {        //si solo se deja "else" toma a cualquier valor != 1
+          peso_final = peso * g_jupiter / g_tierra;
+          nombre = "Jupiter";
+      }
+      else {
+          peso_final = 100000;
+          nombre = "Cripton";
+      }
+      //peso_final = parseInt(peso_final);
+      //parseInt corta los decimales. Pasa de # flotante a # entero. Tmb permite que un # que da el usuario pueda usarse para trabajar
+      peso_final = peso_final.toFixed(2);                     //toFixed redondea
+      document.write("Tu peso en " + nombre + " es <strong>" +  peso_final + " kg </strong>");
+      // hmtl es texto plano para JS. <strong> va dentro de las " "
+    </script>
+  </body>
+</html>
