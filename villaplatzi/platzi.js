@@ -35,6 +35,12 @@ var cantidad = aleatorio(3, 5);
 var movimiento = 20;
 var cx = 150, cy = 150;
 
+//POSICIONES FIJAS DE LAS VACAS CREADAS, GUARDADAS EN UNA MATRIZ
+var posFijaVacas = [
+    [2],
+    [maxVacas]//definición de variables para X y Y
+  ]
+
 console.log(cantidad);  //para ver la cantidad de vacas que aparecen
 
 fondo.imagen = new Image();    //creamos una nueva imagen. Hasta ahora solo cargabamos imagenes ya hechas
